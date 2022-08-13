@@ -349,7 +349,7 @@ def edit_venue_submission(venue_id):
     venue.looking_for_talent = form.seeking_talent.data
     venue.seeking_description = form.seeking_description.data
     db.session.commit()
-    flash('Artist ' + request.form['name'] + ' information has been successfully updated!', 'success')
+    flash('Venue ' + request.form['name'] + ' information has been successfully updated!', 'success')
   except:
     db.session.rollback()
     print(sys.exc_info)
