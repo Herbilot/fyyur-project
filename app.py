@@ -348,6 +348,7 @@ def edit_venue_submission(venue_id):
     venue.website = form.website_link.data
     venue.looking_for_talent = form.seeking_talent.data
     venue.seeking_description = form.seeking_description.data
+    db.session.commit()
     flash('Artist ' + request.form['name'] + ' information has been successfully updated!', 'success')
   except:
     db.session.rollback()
